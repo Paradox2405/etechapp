@@ -209,7 +209,7 @@ class _FoodState extends State<Food> {
                           child: Image.asset('assets/burger.jpg', height: 240,
                             fit: BoxFit.cover,),
                         ),
-                        Text('Beef Burger', style: TextStyle(fontSize: 20,
+                        Text('AMD Ryzen', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -218,7 +218,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS: 350.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS: 35000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
@@ -258,7 +258,7 @@ class _FoodState extends State<Food> {
                             fit: BoxFit.cover,),
                         ),
 
-                        Text('Checken Burger', style: TextStyle(fontSize: 20,
+                        Text('Nvidia RTX 2070', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -267,7 +267,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS:250.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS:250000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
@@ -301,7 +301,7 @@ class _FoodState extends State<Food> {
                           child: Image.asset('assets/pancake.jpg', height: 100,
                             fit: BoxFit.cover,),
                         ),
-                        Text('PanCake', style: TextStyle(fontSize: 20,
+                        Text('ASUS', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -310,7 +310,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS:200.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS:20000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
@@ -345,7 +345,7 @@ class _FoodState extends State<Food> {
                             'assets/chesscake.jpeg', height: 100,
                             fit: BoxFit.cover,),
                         ),
-                        Text('Chess Cake', style: TextStyle(fontSize: 20,
+                        Text('Gigabyte', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -354,7 +354,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS:120.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS:12000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
@@ -388,7 +388,7 @@ class _FoodState extends State<Food> {
                           child: Image.asset('assets/avocado.jpeg', height: 100,
                             fit: BoxFit.cover,),
                         ),
-                        Text('Avocado Juice', style: TextStyle(fontSize: 20,
+                        Text('AMD', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -397,7 +397,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS:130.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS:130000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
@@ -431,7 +431,7 @@ class _FoodState extends State<Food> {
                           child: Image.asset('assets/orange.jpg', height: 240,
                             fit: BoxFit.cover,),
                         ),
-                        Text('Orange Juice', style: TextStyle(fontSize: 20,
+                        Text('Nvidia GTX 1080', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
                             fontWeight: FontWeight.w900),),
                         Padding(
@@ -440,7 +440,7 @@ class _FoodState extends State<Food> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Text('RS: 110.00', style: TextStyle(fontWeight: FontWeight.w800),),
+                                Text('RS: 110000.00', style: TextStyle(fontWeight: FontWeight.w800),),
                                 GestureDetector(
                                   child: Container(
 
