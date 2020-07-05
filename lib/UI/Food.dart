@@ -283,7 +283,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/checkenBurger.jpg', '1.2', 'Checken Burger'),
+                                  onTap: ()=>AddItem('assets/checkenBurger.jpg', '1.2', 'AMD'),
                                 )
                               ],
                             )
@@ -326,7 +326,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () => AddItem('assets/pancake.jpg', '0.8', 'PanCake'),
+                                  onTap: () => AddItem('assets/pancake.jpg', '0.8', 'Nvidia'),
                                 )
                               ],
                             )
@@ -370,7 +370,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/chesscake.jpeg', '1.5', 'Chess Cake'),
+                                  onTap: () =>AddItem('assets/chesscake.jpeg', '1.5', 'Nvdia'),
                                 )
                               ],
                             )
@@ -413,7 +413,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/avocado.jpeg', '1.5', 'Avocado Juice'),
+                                  onTap: () =>AddItem('assets/avocado.jpeg', '1.5', 'ASUS'),
                                 )
                               ],
                             )
@@ -456,7 +456,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/orange.jpg', '1.0', 'Orange Juice'),
+                                  onTap: ()=>AddItem('assets/orange.jpg', '1.0', 'Palit'),
                                 )
                               ],
                             )

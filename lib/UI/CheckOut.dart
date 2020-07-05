@@ -97,9 +97,9 @@ class _CheckOutState extends State<CheckOut> {
             ),
                 CheckboxGroup(
                     labels: <String>[
-                      "Suce",
-                      "Mayo",
-                      "Katchap",
+                      "Extra Nails",
+                      "Thermal Paste",
+                      "Screw Driver",
                     ],
                     onSelected: (List<String> checked)=>addition = List.from(checked)
 
@@ -116,7 +116,7 @@ class _CheckOutState extends State<CheckOut> {
             ),
             Padding(
               padding: EdgeInsets.only(top: 20),
-              child: Text('Price : $price RO',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+              child: Text('Price : $price RS',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: 5,top: 20),
