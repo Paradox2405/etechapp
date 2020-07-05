@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
 import 'package:headup_loading/headup_loading.dart';
-import 'package:resturant_app/UI/OrderObj.dart';
+import 'package:etechapp/UI/OrderObj.dart';
 import 'auth.dart';
 
 

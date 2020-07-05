@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "696347520989",
-    "firebase_url": "https://resturantapp-18eb3.firebaseio.com",
-    "project_id": "resturantapp-18eb3",
-    "storage_bucket": "resturantapp-18eb3.appspot.com"
+    "project_number": "244587117690",
+    "firebase_url": "https://e-tech-store.firebaseio.com",
+    "project_id": "e-tech-store",
+    "storage_bucket": "e-tech-store.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:696347520989:android:aa8ef101bdbd12e7cad034",
+        "mobilesdk_app_id": "1:244587117690:android:44292e5e8bf09a18b24fc3",
         "android_client_info": {
-          "package_name": "com.example.resturant_app"
+          "package_name": "com.example.etechapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "696347520989-7ro30egjm7l9bmnib9eb9m2ra9t88fb5.apps.googleusercontent.com",
+          "client_id": "244587117690-mu2bi43pbc71uao647jabiio40c3mvl0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-_NP6s12N68LTkv221j_dYtyRuFpKkD0"
+          "current_key": "AIzaSyBB3r_lLJNLGxpsrSQnbBwo3khwBLDO7Oo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "696347520989-7ro30egjm7l9bmnib9eb9m2ra9t88fb5.apps.googleusercontent.com",
+              "client_id": "244587117690-mu2bi43pbc71uao647jabiio40c3mvl0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

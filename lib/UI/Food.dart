@@ -2,11 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:resturant_app/UI/Account.dart';
-import 'package:resturant_app/UI/CheckOut.dart';
-import 'package:resturant_app/UI/OrderList.dart';
-import 'package:resturant_app/UI/OrderObj.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/UI/Account.dart';
+import 'package:etechapp/UI/CheckOut.dart';
+import 'package:etechapp/UI/OrderList.dart';
+import 'package:etechapp/UI/OrderObj.dart';
+import 'package:etechapp/model/DataBase.dart';
 
 import 'MainHome.dart';
 import 'ProfilePage.dart';

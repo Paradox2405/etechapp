@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:headup_loading/headup_loading.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/model/DataBase.dart';
 
 import 'OrderListDetail.dart';
 

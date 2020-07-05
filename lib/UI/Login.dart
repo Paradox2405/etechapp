@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
 import 'package:headup_loading/headup_loading.dart';
 
-import 'package:resturant_app/UI/Food.dart';
-import 'package:resturant_app/UI/Register.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/UI/Food.dart';
+import 'package:etechapp/UI/Register.dart';
+import 'package:etechapp/model/DataBase.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
-import 'package:resturant_app/UI/ItemCard.dart';
-import 'package:resturant_app/UI/OrderObj.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/UI/ItemCard.dart';
+import 'package:etechapp/UI/OrderObj.dart';
+import 'package:etechapp/model/DataBase.dart';
 
 class CheckOut extends StatefulWidget {
   List<OrderObj> UserOrder ;

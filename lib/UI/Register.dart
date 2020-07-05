@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/model/DataBase.dart';
 
 class Register extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:resturant_app/UI/Login.dart';
-import 'package:resturant_app/UI/test.dart';
+import 'package:etechapp/UI/Login.dart';
+import 'package:etechapp/UI/test.dart';
 
 import 'UI/Food.dart';
 

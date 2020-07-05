@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:io';
 import 'package:path/path.dart';
-import 'package:resturant_app/model/DataBase.dart';
+import 'package:etechapp/model/DataBase.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'item.dart';
