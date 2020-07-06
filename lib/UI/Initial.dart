@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:contactus/contactus.dart';
+import 'package:etechapp/Gpus/AmdGpu.dart';
+import 'package:etechapp/Gpus/NvidiaGpu.dart';
 import 'package:etechapp/UI/MapLocation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -110,17 +112,18 @@ class _FoodState extends State<Food> {
                   onPressed: () => Scaffold.of(context).openDrawer(),
                 );
               }),
-          title: Text("Order List"),
+          title: Text("Our Products List"),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.archive),
+              icon: Icon(Icons.shopping_cart),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BookApp()));
+                    MaterialPageRoute(builder: (context) => CheckOut(UserOrder: UserOrder,)));
               },
             ),
 
           ],
+
         ),
 
       drawer: Drawer(
@@ -161,14 +164,6 @@ class _FoodState extends State<Food> {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ProfilePage()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.fastfood, color: Colors.teal,),
-              title: Text('User Favorites'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BookApp()));
               },
             ),
             ListTile(
@@ -213,7 +208,7 @@ class _FoodState extends State<Food> {
                 color: Colors.teal
             ),),
             SizedBox(
-              height: 10,
+              height: 0,
             ),
             ConstrainedBox(
 
@@ -234,8 +229,15 @@ class _FoodState extends State<Food> {
 
                           height: 300,
                           width: double.infinity,
-                          child: Image.asset('assets/burger.jpg', height: 240,
+                          child:GestureDetector(
+                            child: Image.asset('assets/gpu2.jpg', height: 240,
                             fit: BoxFit.cover,),
+                          onTap: (){
+
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => AmdGpu()));
+                          },
+                          )
                         ),
                         Text('AMD Ryzen', style: TextStyle(fontSize: 20,
                             color: Colors.black54,
@@ -262,7 +264,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap:() => AddItem('assets/burger.jpg', '1.2', 'Beef Burger') ,
+                                  onTap:() => AddItem('assets/gpu2.jpg', '35000', 'AMD Ryzen') ,
                                 )
                               ],
                             )
@@ -279,11 +281,19 @@ class _FoodState extends State<Food> {
                         SizedBox(
 
 
+
                           height: 290,
                           width: double.infinity,
-                          child: Image.asset(
-                            'assets/checkenBurger.jpg', height: 240,
+                          child: GestureDetector(
+                            child:Image.asset(
+                            'assets/gpu3.jpg', height: 240,
                             fit: BoxFit.cover,),
+                            onTap: (){
+
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) => NvidiaGpu()));
+                            },
+                        )
                         ),
 
                         Text('Nvidia RTX 2070', style: TextStyle(fontSize: 20,
@@ -311,7 +321,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/checkenBurger.jpg', '1.2', 'AMD'),
+                                  onTap: ()=>AddItem('assets/gpu3.jpg', '1.2', 'AMD'),
                                 )
                               ],
                             )
@@ -370,7 +380,7 @@ class _FoodState extends State<Food> {
                           height: 300,
                           width: double.infinity,
                           child: Image.asset(
-                            'assets/chesscake.jpeg', height: 100,
+                            'assets/gpu4.jpeg', height: 100,
                             fit: BoxFit.cover,),
                         ),
                         Text('Gigabyte', style: TextStyle(fontSize: 20,
@@ -398,7 +408,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/chesscake.jpeg', '1.5', 'Nvdia'),
+                                  onTap: () =>AddItem('assets/gpu4.jpeg', '1.5', 'Nvdia'),
                                 )
                               ],
                             )
@@ -413,7 +423,7 @@ class _FoodState extends State<Food> {
                         SizedBox(
                           height: 300,
                           width: double.infinity,
-                          child: Image.asset('assets/avocado.jpeg', height: 100,
+                          child: Image.asset('assets/gpu1.jpeg', height: 100,
                             fit: BoxFit.cover,),
                         ),
                         Text('AMD', style: TextStyle(fontSize: 20,
@@ -441,7 +451,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/avocado.jpeg', '1.5', 'ASUS'),
+                                  onTap: () =>AddItem('assets/gpu1.jpeg', '1.5', 'ASUS'),
                                 )
                               ],
                             )
@@ -456,7 +466,7 @@ class _FoodState extends State<Food> {
                         SizedBox(
                           height: 300,
                           width: double.infinity,
-                          child: Image.asset('assets/orange.jpg', height: 240,
+                          child: Image.asset('assets/gpu5.jpg', height: 240,
                             fit: BoxFit.cover,),
                         ),
                         Text('Nvidia GTX 1080', style: TextStyle(fontSize: 20,
@@ -484,7 +494,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/orange.jpg', '1.0', 'Palit'),
+                                  onTap: ()=>AddItem('assets/gpu5.jpg', '1.0', 'Palit'),
                                 )
                               ],
                             )

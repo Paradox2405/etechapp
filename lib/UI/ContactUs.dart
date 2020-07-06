@@ -7,6 +7,9 @@ class Contact extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+
+        appBar: AppBar(backgroundColor: Colors.teal),
+
         bottomNavigationBar: ContactUsBottomAppBar(
           companyName: 'E-Tech Store',
           textColor: Colors.white,
@@ -26,7 +29,7 @@ class Contact extends StatelessWidget {
           tagLine: 'GPU Specialists ',
           taglineColor: Colors.teal.shade100,
           instagram: 'udeshj1998',
-          facebookHandle: 'etech2020',
+          facebookHandle: 'E-tech-107632344351245',
         ),
       ),
     );
