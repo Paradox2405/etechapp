@@ -2,20 +2,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class Item{
-  String resturantName;
-  String foodName;
+  String gpuName;
+  String gpuType;
   String location;
   String price;
   String photo;
 
   DocumentReference documentReference;
 
-  Item({this.resturantName,this.foodName,this.location,this.price,this.photo});
+  Item({this.gpuName,this.gpuType,this.location,this.price,this.photo});
 
   Item.fromMap(Map<String,dynamic> map, {this.documentReference}){
 
-     resturantName  = map["resturantName"];
-     foodName = map["foodName"];
+     gpuName  = map["gpuName"];
+
      location = map["location"];
      price = map["price"];
      photo = map["photo"];
@@ -30,7 +30,7 @@ class Item{
       :this.fromMap(snapshot.data, documentReference:snapshot.reference);
 
   toJson(){
-    return{'resturantName': resturantName, 'foodName' : foodName, 'location' : location, 'price' : price, 'photo' : photo};
+    return{'gpuName': gpuName, 'location' : location, 'price' : price, 'photo' : photo};
 
   }
 
