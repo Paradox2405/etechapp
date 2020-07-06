@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
 import 'package:headup_loading/headup_loading.dart';
 
-import 'package:etechapp/UI/Food.dart';
+import 'package:etechapp/UI/Initial.dart';
 import 'package:etechapp/UI/Register.dart';
 import 'package:etechapp/model/DataBase.dart';
 
