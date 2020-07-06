@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:contactus/contactus.dart';
 import 'package:etechapp/UI/MapLocation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -10,6 +11,7 @@ import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/model/DataBase.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'ContactUs.dart';
 import 'MainHome.dart';
 import 'ProfilePage.dart';
 import 'test.dart';
@@ -111,7 +113,7 @@ class _FoodState extends State<Food> {
           title: Text("Order List"),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.fastfood),
+              icon: Icon(Icons.archive),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => BookApp()));
@@ -169,6 +171,14 @@ class _FoodState extends State<Food> {
                     MaterialPageRoute(builder: (context) => BookApp()));
               },
             ),
+            ListTile(
+              leading: Icon(Icons.phone, color: Colors.teal,),
+              title: Text('Contact Us'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Contact()));
+              },
+            ),
 
             ListTile(
               leading: Icon(Icons.location_on, color: Colors.teal,),
@@ -203,7 +213,7 @@ class _FoodState extends State<Food> {
                 color: Colors.teal
             ),),
             SizedBox(
-              height: 0,
+              height: 10,
             ),
             ConstrainedBox(
 
