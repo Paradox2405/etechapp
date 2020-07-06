@@ -33,7 +33,7 @@ class BookFirebaseDemo extends StatefulWidget {
 
   final String appTitle = "Book DB";
 
-  static String Fref = "Roti";
+  static String Fref = "Gpu";
 
   setMRef(ref){
     var hh;

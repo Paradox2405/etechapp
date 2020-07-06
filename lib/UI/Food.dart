@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:etechapp/UI/MapLocation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:etechapp/UI/CheckOut.dart';
 import 'package:etechapp/UI/OrderList.dart';
 import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/model/DataBase.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'MainHome.dart';
 import 'ProfilePage.dart';
@@ -152,8 +154,8 @@ class _FoodState extends State<Food> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.add_a_photo, color:Colors.teal,),
-              title: Text('Post Yours'),
+              leading: Icon(Icons.public, color:Colors.teal,),
+              title: Text('Our Services'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ProfilePage()));
@@ -167,9 +169,25 @@ class _FoodState extends State<Food> {
                     MaterialPageRoute(builder: (context) => BookApp()));
               },
             ),
+
+            ListTile(
+              leading: Icon(Icons.location_on, color: Colors.teal,),
+              title: Text('Locate Us'),
+              onTap: () {
+                FlutterToast.showToast(msg: "Tap Marker to Navigate",
+                  toastLength: Toast.LENGTH_LONG,
+                  gravity: ToastGravity.BOTTOM,);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MapLocation()));
+
+                },
+            ),
           ],
         ),
       ),
+
+
+
       body:
       SingleChildScrollView(
 

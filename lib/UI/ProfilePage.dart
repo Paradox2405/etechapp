@@ -22,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
 
   TextEditingController ResturantNameController = TextEditingController();
-  TextEditingController FoodNameController = TextEditingController();
+  TextEditingController GpuTypeController = TextEditingController();
   TextEditingController LocationController = TextEditingController();
   TextEditingController PriceController = TextEditingController();
 
@@ -30,7 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Item currentFood;
 
   addItem(String uploadedImage) async {
-    Item item = Item(resturantName: ResturantNameController.text, foodName: FoodNameController.text, location: LocationController.text, price: PriceController.text, photo: uploadedImage);
+    Item item = Item(gpuName: ResturantNameController.text, gpuType: GpuTypeController.text, location: LocationController.text, price: PriceController.text, photo: uploadedImage);
 
     try{
 
@@ -172,7 +172,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 10.0,
                 ),
                 TextField(
-                  controller: FoodNameController,
+                  controller: GpuTypeController,
                   decoration: InputDecoration(hintText: "Deviled Checken Pizza",contentPadding: const EdgeInsets.fromLTRB(30,0,0,-15)),
                 ),
 
