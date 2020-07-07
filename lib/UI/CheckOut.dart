@@ -7,6 +7,9 @@ import 'package:flutter_awesome_alert_box/flutter_awesome_alert_box.dart';
 import 'package:etechapp/UI/ItemCard.dart';
 import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/model/DataBase.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'PaypalPayment.dart';
 
 class CheckOut extends StatefulWidget {
   List<OrderObj> UserOrder ;
@@ -16,6 +19,11 @@ class CheckOut extends StatefulWidget {
 }
 
 class _CheckOutState extends State<CheckOut> {
+
+  TextStyle style = TextStyle(fontFamily: 'Open Sans', fontSize: 15.0);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+
   var price = 0.0;
   var item = 0 ;
   var fireDB = DataBase();
@@ -29,7 +37,27 @@ class _CheckOutState extends State<CheckOut> {
   Buy(BuildContext contxt){
 
     if(widget.UserOrder.isNotEmpty){
-   fireDB.addOrder(male: male,price: malePrice,delivery: delivery,totalPrice: price,rating: rating,addition: addition);
+
+
+
+      // make PayPal payment
+
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (BuildContext context) => PaypalPayment(
+            onFinish: (number) async {
+
+              // payment done
+              print('order id: '+number);
+
+            },
+          ),
+        ),
+      );
+
+
+
+      fireDB.addOrder(male: male,price: malePrice,delivery: delivery,totalPrice: price,rating: rating,addition: addition);
    SuccessAlertBox(context: contxt,title: 'Successful',messageText: 'You have Order Successfully');
    widget.UserOrder.clear();
     }else{
@@ -100,6 +128,7 @@ class _CheckOutState extends State<CheckOut> {
                       "Extra Nails",
                       "Thermal Paste",
                       "Screw Driver",
+                      "In Home Fitting Service",
                     ],
                     onSelected: (List<String> checked)=>addition = List.from(checked)
 
@@ -108,8 +137,8 @@ class _CheckOutState extends State<CheckOut> {
             Divider(),
             RadioButtonGroup(
                 labels: <String>[
-                  "Deliver to home",
-                  "Deliver to work",
+                  "Online Payment" ,
+                  "Pay on Delivery",
                 ],
                 onSelected: (String selected) => delivery=selected,
 

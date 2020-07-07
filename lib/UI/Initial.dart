@@ -1,23 +1,18 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:contactus/contactus.dart';
 import 'package:etechapp/Gpus/AmdGpu.dart';
 import 'package:etechapp/Gpus/NvidiaGpu.dart';
-import 'package:etechapp/UI/MapLocation.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
 import 'package:etechapp/UI/Account.dart';
 import 'package:etechapp/UI/CheckOut.dart';
+import 'package:etechapp/UI/MapLocation.dart';
 import 'package:etechapp/UI/OrderList.dart';
 import 'package:etechapp/UI/OrderObj.dart';
-import 'package:etechapp/model/DataBase.dart';
+import 'package:etechapp/UI/OurServices.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'ContactUs.dart';
-import 'MainHome.dart';
-import 'ProfilePage.dart';
-import 'test.dart';
-import 'Reviews.dart';
+
 
 class Gpu extends StatefulWidget {
   var userID;
@@ -161,10 +156,10 @@ class _GpuState extends State<Gpu> {
             ListTile(
               leading: Icon(Icons.public, color:Colors.teal,),
               title: Text('Our Services'),
-              //onTap: () {
-              //  Navigator.push(context,
-                    //MaterialPageRoute(builder: (context) => ProfilePage()));
-             // },
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Services()));
+              },
             ),
             ListTile(
               leading: Icon(Icons.phone, color: Colors.teal,),
@@ -186,6 +181,16 @@ class _GpuState extends State<Gpu> {
                     MaterialPageRoute(builder: (context) => MapLocation()));
 
                 },
+            ),
+            SizedBox(
+              height: 210,
+            ),
+
+            ListTile(
+              title: Text('           ABN 53 004 556 448',
+                style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),),
+
+
             ),
           ],
         ),
