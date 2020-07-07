@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/UI/CheckOut.dart';
+import 'package:screenshot/screenshot.dart';
+import 'package:social_share/social_share.dart';
 
 
 class NvidiaGpu extends StatefulWidget {
@@ -9,7 +11,7 @@ class NvidiaGpu extends StatefulWidget {
 }
 
 class _NvidiaGpuState extends State<NvidiaGpu> {
-
+  ScreenshotController screenshotController = ScreenshotController();
   List<OrderObj> UserOrder = new List();
 
   CheckoutBtn(){
@@ -47,51 +49,119 @@ class _NvidiaGpuState extends State<NvidiaGpu> {
       appBar: AppBar(backgroundColor: Colors.teal,
         title: Text('Nvidia Gpu'),
       ),
-      body: SafeArea(
-        child: Column(
+      body: Screenshot(
+
+        controller: screenshotController,
 
 
-          children: <Widget>[
-            Image.asset("assets/gpu3.jpg"),
-            description,
-            GestureDetector(
-              child: Container(
+        child:SafeArea(
+          child: Column(
 
-                child: Text(
-                  'Add to cart', style: TextStyle(fontSize: 16),),
-                padding: EdgeInsets.only(
-                    top: 2, bottom: 2, right: 5, left: 5),
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.all(
-                      Radius.circular(4)),
+
+            children: <Widget>[
+              Image.asset("assets/gpu3.jpg"),
+              description,
+              GestureDetector(
+                child: Container(
+
+                  child: Text(
+                    'Add to cart', style: TextStyle(fontSize: 16),),
+                  padding: EdgeInsets.only(
+                      top: 2, bottom: 2, right: 5, left: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(4)),
+
+                  ),
 
                 ),
+                onTap: ()=>AddItem('assets/gpu3.jpg', '250000', 'Nvidia'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                child: Container(
+
+                  child: Text(
+                    'Share To Instagram ', style: TextStyle(fontSize: 16),),
+                  padding: EdgeInsets.only(
+                      top: 2, bottom: 2, right: 5, left: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(4)),
+
+                  ),
+
+                ),
+                onTap: ()async{
+                  await screenshotController.capture().then((image) async{
+                    SocialShare.shareInstagramStorywithBackground(image.path,"#ffffff", "#000000", "https://deep-link-url",
+                        backgroundImagePath: image.path)
+                        .then((data){
+                      print(data);
+                    });
+                  });
+                },
 
               ),
-              onTap: ()=>AddItem('assets/gpu3.jpg', '1.2', 'AMD'),
-            ),
-            SizedBox(
-              height: 130,
-            ),
-            Padding(
 
+              SizedBox(
+                height: 20,
+              ),
 
-                padding: EdgeInsets.only(top: 5,bottom: 20),
-                child:RaisedButton(onPressed: () => CheckoutBtn(),
-                  child: Text('(${UserOrder.length}) CheckOut',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w400),),
-                  shape:RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
-                      side: BorderSide(color: Colors.teal)
+              GestureDetector(
+                child: Container(
+
+                  child: Text(
+                    'Share To Facebook ', style: TextStyle(fontSize: 16),),
+                  padding: EdgeInsets.only(
+                      top: 2, bottom: 2, right: 5, left: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.all(
+                        Radius.circular(4)),
+
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 9.0,horizontal: 40.0),
-                  color: Colors.teal,
-                )
-            )
-          ],
+
+                ),
+                onTap: ()async{
+                  // await screenshotController.capture().then((image) async{
+                  //facebook appId is mandatory for andorid or else share won't work
+                  //Platform.isAndroid
+                  // ? SocialShare.shareFacebookStory(image.path,
+                  //   "#ffffff", "#000000", "https://google.com",
+                  //appId: "xxxxxxxxxxxxx")
+                  //  .then((data){
+                  // print(data);
+                  //  });
+                  // });
+                },
+
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Padding(
+
+
+                  padding: EdgeInsets.only(top: 5,bottom: 5),
+                  child:RaisedButton(onPressed: () => CheckoutBtn(),
+                    child: Text('(${UserOrder.length}) CheckOut',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w400),),
+                    shape:RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(30.0),
+                        side: BorderSide(color: Colors.teal)
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 9.0,horizontal: 40.0),
+                    color: Colors.teal,
+                  )
+              )
+            ],
+          ),
         ),
       ),
-
     );
   }
 }

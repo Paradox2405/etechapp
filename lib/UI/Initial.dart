@@ -19,14 +19,14 @@ import 'ProfilePage.dart';
 import 'test.dart';
 import 'Reviews.dart';
 
-class Food extends StatefulWidget {
+class Gpu extends StatefulWidget {
   var userID;
- Food(this.userID);
+ Gpu(this.userID);
   @override
-  _FoodState createState() => _FoodState();
+  _GpuState createState() => _GpuState();
 }
 
-class _FoodState extends State<Food> {
+class _GpuState extends State<Gpu> {
 
   var userID;
   var name='User1';
@@ -161,10 +161,10 @@ class _FoodState extends State<Food> {
             ListTile(
               leading: Icon(Icons.public, color:Colors.teal,),
               title: Text('Our Services'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
-              },
+              //onTap: () {
+              //  Navigator.push(context,
+                    //MaterialPageRoute(builder: (context) => ProfilePage()));
+             // },
             ),
             ListTile(
               leading: Icon(Icons.phone, color: Colors.teal,),
@@ -321,7 +321,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/gpu3.jpg', '1.2', 'AMD'),
+                                  onTap: ()=>AddItem('assets/gpu3.jpg', '250000', 'AMD'),
                                 )
                               ],
                             )
@@ -336,7 +336,7 @@ class _FoodState extends State<Food> {
                         SizedBox(
                           height: 300,
                           width: double.infinity,
-                          child: Image.asset('assets/pancake.jpg', height: 100,
+                          child: Image.asset('assets/gpu6.jpg', height: 100,
                             fit: BoxFit.cover,),
                         ),
                         Text('ASUS', style: TextStyle(fontSize: 20,
@@ -364,7 +364,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () => AddItem('assets/pancake.jpg', '0.8', 'Nvidia'),
+                                  onTap: () => AddItem('assets/gpu6.jpg', '450000', 'Nvidia'),
                                 )
                               ],
                             )
@@ -408,7 +408,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/gpu4.jpeg', '1.5', 'Nvdia'),
+                                  onTap: () =>AddItem('assets/gpu4.jpeg', '250000', 'Nvdia'),
                                 )
                               ],
                             )
@@ -451,7 +451,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: () =>AddItem('assets/gpu1.jpeg', '1.5', 'ASUS'),
+                                  onTap: () =>AddItem('assets/gpu1.jpeg', '10000', 'ASUS'),
                                 )
                               ],
                             )
@@ -494,7 +494,7 @@ class _FoodState extends State<Food> {
                                     ),
 
                                   ),
-                                  onTap: ()=>AddItem('assets/gpu5.jpg', '1.0', 'Palit'),
+                                  onTap: ()=>AddItem('assets/gpu5.jpg', '150000', 'Palit'),
                                 )
                               ],
                             )

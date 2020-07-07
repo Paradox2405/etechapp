@@ -2,6 +2,10 @@ import 'package:etechapp/UI/test.dart';
 import 'package:flutter/material.dart';
 import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/UI/CheckOut.dart';
+import 'package:social_share/social_share.dart';
+import 'package:screenshot/screenshot.dart';
+import 'dart:async';
+import '';
 
 
 
@@ -16,6 +20,7 @@ class AmdGpu extends StatefulWidget {
 
 class _AmdGpuState extends State<AmdGpu> {
   List<OrderObj> UserOrder = new List();
+  ScreenshotController screenshotController = ScreenshotController();
 
 
   CheckoutBtn(){
@@ -54,7 +59,13 @@ class _AmdGpuState extends State<AmdGpu> {
       appBar: AppBar(backgroundColor: Colors.teal,
         title: Text('AMD Ryzen Gpu'),
       ),
-      body: SafeArea(
+      body:
+      Screenshot(
+
+        controller: screenshotController,
+
+
+      child:SafeArea(
         child: Column(
 
 
@@ -76,15 +87,78 @@ class _AmdGpuState extends State<AmdGpu> {
                 ),
 
               ),
-              onTap: ()=>AddItem('assets/gpu3.jpg', '1.2', 'AMD'),
+              onTap: ()=>AddItem('assets/gpu2.jpg', '35000', 'AMD'),
             ),
             SizedBox(
-              height: 180,
+              height: 20,
+            ),
+            GestureDetector(
+              child: Container(
+
+                child: Text(
+                  'Share To Instagram ', style: TextStyle(fontSize: 16),),
+                padding: EdgeInsets.only(
+                    top: 2, bottom: 2, right: 5, left: 5),
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(4)),
+
+                ),
+
+              ),
+              onTap: ()async{
+                await screenshotController.capture().then((image) async{
+                  SocialShare.shareInstagramStorywithBackground(image.path,"#ffffff", "#000000", "https://deep-link-url",
+                      backgroundImagePath: image.path)
+                      .then((data){
+                        print(data);
+                  });
+                });
+                },
+
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            GestureDetector(
+              child: Container(
+
+                child: Text(
+                  'Share To Facebook ', style: TextStyle(fontSize: 16),),
+                padding: EdgeInsets.only(
+                    top: 2, bottom: 2, right: 5, left: 5),
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(4)),
+
+                ),
+
+              ),
+              onTap: ()async{
+               // await screenshotController.capture().then((image) async{
+                  //facebook appId is mandatory for andorid or else share won't work
+                  //Platform.isAndroid
+                     // ? SocialShare.shareFacebookStory(image.path,
+                   //   "#ffffff", "#000000", "https://google.com",
+                      //appId: "xxxxxxxxxxxxx")
+                    //  .then((data){
+                   // print(data);
+                //  });
+               // });
+              },
+
+            ),
+            SizedBox(
+              height: 100,
             ),
             Padding(
 
 
-                padding: EdgeInsets.only(top: 5,bottom: 20),
+                padding: EdgeInsets.only(top: 5,bottom: 5),
                 child:RaisedButton(onPressed: () => CheckoutBtn(),
                   child: Text('(${UserOrder.length}) CheckOut',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w400),),
                   shape:RoundedRectangleBorder(
@@ -98,7 +172,7 @@ class _AmdGpuState extends State<AmdGpu> {
           ],
         ),
       ),
-
+          ),
     );
   }
 }
