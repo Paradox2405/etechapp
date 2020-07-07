@@ -234,7 +234,7 @@ class _BookFirebaseDemoState extends State<BookFirebaseDemo> {
                   Divider(),
                   Row( children: <Widget>[
                     Icon(Icons.restaurant, color: Colors.teal,),
-                    Text("  "+book.restName),
+                    Text("  "+book.gpuName),
                   ],
                   ),
                   Divider(),
@@ -307,20 +307,20 @@ class _BookFirebaseDemoState extends State<BookFirebaseDemo> {
             }),
 
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
+         // IconButton(
+          //  icon: Icon(Icons.add),
 
-            onPressed: (){
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()));
+           // onPressed: (){
+           //   Navigator.push(context,
+            //      MaterialPageRoute(builder: (context) => ProfilePage()));
 
-            },
-          ),
+          //  },
+        //  ),
           IconButton(
             icon: Icon(Icons.fastfood),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Food(0)));
+                  MaterialPageRoute(builder: (context) => Gpu(0)));
             },
           ),
 
@@ -351,14 +351,14 @@ class _BookFirebaseDemoState extends State<BookFirebaseDemo> {
               },
             ),
 
-            ListTile(
-              leading: Icon(Icons.fastfood, color:Colors.teal,),
-              title: Text('Post Yours'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
-              },
-            ),
+           // ListTile(
+             // leading: Icon(Icons.fastfood, color:Colors.teal,),
+            //  title: Text('Post Yours'),
+             // onTap: () {
+              //  Navigator.push(context,
+                 //   MaterialPageRoute(builder: (context) => ProfilePage()));
+             // },
+           // ),
             ListTile(
               leading: Icon(Icons.fastfood, color: Colors.teal,),
               title: Text('Reviews'),

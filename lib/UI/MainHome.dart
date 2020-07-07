@@ -56,11 +56,11 @@ class _MainHome extends State<MainHome>{
               String location =documentFields['location'];
               //Photo =documentFields['photo'];
               String price = documentFields['price'];
-              String resturantName =documentFields['resturantName'];
+              String gpuName =documentFields['gpuName'];
 
               String imageUrl = documentFields['photo'];
 
-              print(" "+foodName+" "+location+" "+imageUrl+" "+price+" "+resturantName);
+              print(" "+foodName+" "+location+" "+imageUrl+" "+price+" "+gpuName);
 
               return Scaffold(
                   appBar: AppBar(backgroundColor: Colors.teal,

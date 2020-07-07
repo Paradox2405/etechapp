@@ -34,7 +34,7 @@ var fireDB = DataBase();
       // CircularProgressIndicator();
       if(userId != "not"){
 
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Food(userId)));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Gpu(userId)));
         //  onSignIn();    // some error here on lesson 5 in 12:00 min almost, because no parameter given
       }else if(userId=="not") {
         // username or password are wrong

@@ -338,14 +338,14 @@ class _BookFirebaseDemoState2 extends State<BookFirebaseDemo2> {
               },
             ),
 
-            ListTile(
-              leading: Icon(Icons.fastfood, color:Colors.teal,),
-              title: Text('Post Yours'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
-              },
-            ),
+           // ListTile(
+            //  leading: Icon(Icons.shoppingcart, color:Colors.teal,),
+            //  title: Text('Post Yours'),
+              //onTap: () {
+               // Navigator.push(context,
+                 //   MaterialPageRoute(builder: (context) => ProfilePage()));
+             // },
+          //  ),
             ListTile(
               leading: Icon(Icons.fastfood, color: Colors.teal,),
               title: Text('Reviews'),
