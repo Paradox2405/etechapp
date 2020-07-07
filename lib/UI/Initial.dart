@@ -12,12 +12,8 @@ import 'package:etechapp/UI/OrderList.dart';
 import 'package:etechapp/UI/OrderObj.dart';
 import 'package:etechapp/model/DataBase.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
 import 'ContactUs.dart';
-import 'MainHome.dart';
-import 'ProfilePage.dart';
-import 'test.dart';
-import 'Reviews.dart';
+
 
 class Gpu extends StatefulWidget {
   var userID;
@@ -186,6 +182,16 @@ class _GpuState extends State<Gpu> {
                     MaterialPageRoute(builder: (context) => MapLocation()));
 
                 },
+            ),
+            SizedBox(
+              height: 210,
+            ),
+
+            ListTile(
+              title: Text('           ABN 53 004 556 448',
+                style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),),
+
+
             ),
           ],
         ),
